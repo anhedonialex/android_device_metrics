@@ -41,3 +41,9 @@ def lookyIsUpInfo(device):
     else:
         info["appIsUp"] = "false"
     return info
+
+def wifiInfo(device):
+    info = {}
+    info["wifi"] = device.shell('dumpsys wifi | grep "Wi-Fi is"')
+    return info
+

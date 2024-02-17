@@ -1,6 +1,5 @@
 from ppadb.client import Client as AdbClient
-
-import getmetrics
+import getmetrics_phone
 import secrets
 
 
@@ -19,10 +18,10 @@ def main():
     client = AdbClient(host="127.0.0.1", port=5037)
     print("client version", client.version())
     device = client.device(secrets.DEVICE_SERIAL)
-    print(getmetrics.batteryInfo(device))
-    print(getmetrics.RAMInfo(device))
-    print(getmetrics.uptimeInfo(device))
-    print(getmetrics.lookyIsUpInfo(device))
+    print(getmetrics_phone.batteryInfo(device))
+    print(getmetrics_phone.RAMInfo(device))
+    print(getmetrics_phone.uptimeInfo(device))
+    print(getmetrics_phone.lookyIsUpInfo(device))
 
 
 
