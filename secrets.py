@@ -2,3 +2,5 @@ import os
 
 DEVICE_SERIAL = os.getenv("DEVICE_SERIAL")
 APP2MONITOR = os.getenv("APP2MONITOR")
+MONITOR_BOT_TOKEN = os.getenv("MONITOR_BOT_TOKEN")
+MONITOR_CHAT_ID = os.getenv("MONITOR_CHAT_ID")
