@@ -34,7 +34,8 @@ def main():
     except:
         pass
     try:
-        if "curState=ConnectedState" not in getmetrics_phone.wifiInfo(device)["wifi"]:
+        wifi = getmetrics_phone.wifiInfo(device)["wifi"]
+        if not any([state in wifi for state in ["ConnectedState", "ConnectModeState"]]):
             telegram.bot_sendtext(f"<МОНИТОР>\nОтвалился Wifi")
     except:
         pass

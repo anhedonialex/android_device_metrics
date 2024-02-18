@@ -44,6 +44,6 @@ def lookyIsUpInfo(device):
 
 def wifiInfo(device):
     info = {}
-    info["wifi"] = device.shell("dumpsys wifi | grep 'curState=ConnectedState'")
+    info["wifi"] = device.shell("dumpsys wifi | grep 'curState'")
     return info
 
