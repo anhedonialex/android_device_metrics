@@ -30,7 +30,7 @@ def main():
         if battery["USB powered"] != 'true':
             telegram.bot_sendtext(f"<МОНИТОР>\nНе заряжается\n")
         if int(battery["level"]) <= 80:
-            telegram.bot_sendtext(f"<МОНИТОР>\nБатарея разряжается\n{battery["level"]}%")
+            telegram.bot_sendtext(f"<МОНИТОР>\nБатарея разряжается\n{battery['level']}%")
     except:
         pass
     try:
@@ -41,8 +41,8 @@ def main():
     try:
         if not check_for_processes.isAllUp(getmetrics_pc.processesInfo()):
             telegram.bot_sendtext(f"<МОНИТОР>\nНа компе не запущены нужные процессы")
-    except Exception as e:
-        print(e)
+    except Exception as e2:
+        print(e2)
 
 
 if __name__ == "__main__":
